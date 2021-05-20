@@ -1,0 +1,63 @@
+version: '3.7'
+
+services:
+  influxdb:
+    image: influxdb:1.8
+    volumes:
+      - influxdb-storage:/var/lib/influxdb
+    env_file:
+      - default.env
+    restart: always
+
+#  chronograf:
+#    image: chronograf:latest
+#    ports:
+#      - '8888:8888'
+#    volumes:
+#      - chronograf-storage:/var/lib/chronograf
+#    depends_on:
+#      - influxdb
+#    env_file:
+#      - default.env
+#    restart: always
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - '3000:3000'
+    volumes:
+      - grafana-storage:/var/lib/grafana
+      - ./grafana-provisioning/:/etc/grafana/provisioning
+    depends_on:
+      - influxdb
+    env_file:
+      - default.env
+    restart: always
+
+  grpc:
+    image: neurocis/starlink-grpc-tools
+    command: "dish_grpc_influx.py -t 1 -a -v status obstruction_detail alert_detail ping_drop ping_run_length ping_latency ping_loaded_latency usage bulk_history"
+    depends_on:
+      - influxdb
+    env_file:
+      - default.env
+    tty: true
+    restart: always
+
+  netstats:
+    image: docker.pkg.github.com/sponsianus/dishy_grafana/netstats
+    volumes:
+      - ./netstats-provisioning:/etc/telegraf
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - influxdb
+    env_file:
+      - default.env
+    restart: always
+    privileged: true
+
+volumes:
+  influxdb-storage:
+  chronograf-storage:
+  grafana-storage:
+

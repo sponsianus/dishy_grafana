@@ -1,0 +1,24 @@
+apiVersion: 1
+
+providers:
+  - name: 'Starlink'
+    orgId: 1
+    folder: 'Starlink'
+    type: file
+    disableDeletion: true
+    updateIntervalSeconds: 10
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/provisioning/dashboards/starlink
+      foldersFromFilesStructure: false
+
+  - name: 'Network'
+    orgId: 1
+    folder: 'Network'
+    type: file
+    disableDeletion: true
+    updateIntervalSeconds: 10
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/provisioning/dashboards/network
+      foldersFromFilesStructure: false
