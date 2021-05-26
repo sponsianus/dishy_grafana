@@ -32,3 +32,9 @@ All in one
 ```bash
 git pull && docker-compose pull && docker-compose up -d
 ```
+
+## Troubleshooting
+
+- You can check the logs from the containers by running
+    - `docker-compose logs -f`
+
