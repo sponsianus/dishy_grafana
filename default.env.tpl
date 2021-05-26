@@ -2,12 +2,10 @@
 ### User Values ###
 ###################
 
-# Database Settings
+# Login/Database Settings
 
 ADMIN_USERNAME="admin"
 ADMIN_PASSWORD="StrongPassword1234"
-DATABASE_HOST="influxdb"
-DATABASE_PORT="8086"
 
 # Speed Test Settings
 
@@ -21,6 +19,9 @@ SPEEDTEST_INTERVAL="1h"
 ################
 ### Defaults ###
 ################
+
+DATABASE_HOST="influxdb"
+DATABASE_PORT="8086"
 
 INFLUXDB_DB=starlinkstats
 INFLUXDB_URL=http://${DATABASE_HOST}:${DATABASE_PORT}

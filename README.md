@@ -9,11 +9,14 @@ Docker compose project for tracking Dishy and Network statistics.
     - [Install Docker](https://docs.docker.com/get-docker)
     - [Install Compose](https://docs.docker.com/compose/install)
 1. Clone the repo.
-    -  `git clone github.com/sponsianus/dishy_grafana`
-1. Copy `default.env.tpl` to `default.env` and edit the variables to suite your needs.
+    -  `git clone https://github.com/sponsianus/dishy_grafana`
+1. Copy `default.env.tpl` to `default.env` and **edit the variables** to suite your needs.
     - `cp default.env.tpl default.env`
+    - `nano default.env`
 1. Start the app.
     - `docker-compose up -d`
+1. Point your browser to your hosts `IP` and port `3000` to load the Grafana dashboard. (EG. `http://192.168.X.X:3000`)
+    - Login with the credentials you set in the `default.env` file.
 
 ## Updating
 
