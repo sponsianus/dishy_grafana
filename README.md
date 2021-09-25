@@ -20,6 +20,8 @@ Docker compose project for tracking Dishy and Network statistics.
 
 ## Updating
 
+The container images will be rebuilt on a regular basis. To keep your install upto date, perform the following:
+
 1. Update repo.
     - `git pull`
 1. Update container images.
@@ -27,7 +29,7 @@ Docker compose project for tracking Dishy and Network statistics.
 1. Update the running containers.
     - `docker-compose up -d`
 
-All in one
+### All in one
 
 ```bash
 git pull && docker-compose pull && docker-compose up -d
@@ -38,3 +40,6 @@ git pull && docker-compose pull && docker-compose up -d
 - You can check the logs from the containers by running
     - `docker-compose logs -f`
 
+## Resources
+
+- See [starlink-grpc-tools](https://github.com/sparky8512/starlink-grpc-tools) for the GRPC tools used in this project.
