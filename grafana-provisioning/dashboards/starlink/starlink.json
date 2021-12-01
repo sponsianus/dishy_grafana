@@ -8,17 +8,25 @@
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
         "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
         "type": "dashboard"
       }
     ]
   },
   "description": "Dishy Statistics",
   "editable": true,
+  "fiscalYearStartMonth": 0,
   "gnetId": null,
   "graphTooltip": 0,
   "id": 4,
-  "iteration": 1621541262799,
+  "iteration": 1638381135850,
   "links": [],
+  "liveNow": false,
   "panels": [
     {
       "aliasColors": {},
@@ -61,7 +69,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.7",
+      "pluginVersion": "8.2.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -156,7 +164,6 @@
             "mode": "thresholds"
           },
           "mappings": [],
-          "max": 90,
           "min": 0,
           "thresholds": {
             "mode": "absolute",
@@ -166,19 +173,19 @@
                 "value": null
               },
               {
-                "color": "dark-red",
+                "color": "dark-green",
                 "value": 10
               },
               {
-                "color": "semi-dark-red",
+                "color": "semi-dark-green",
                 "value": 20
               },
               {
-                "color": "light-red",
+                "color": "light-green",
                 "value": 30
               },
               {
-                "color": "super-light-red",
+                "color": "super-light-green",
                 "value": 40
               },
               {
@@ -186,24 +193,24 @@
                 "value": 50
               },
               {
-                "color": "super-light-green",
+                "color": "super-light-red",
                 "value": 60
               },
               {
-                "color": "light-green",
+                "color": "light-red",
                 "value": 70
               },
               {
-                "color": "semi-dark-green",
+                "color": "semi-dark-red",
                 "value": 80
               },
               {
-                "color": "dark-green",
+                "color": "dark-red",
                 "value": 90
               }
             ]
           },
-          "unit": "dB"
+          "unit": "ms"
         },
         "overrides": []
       },
@@ -229,11 +236,11 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.7",
+      "pluginVersion": "8.2.5",
       "targets": [
         {
           "groupBy": [],
-          "measurement": "spacex.starlink.user_terminal.history",
+          "measurement": "spacex.starlink.user_terminal.status",
           "orderByTime": "ASC",
           "policy": "default",
           "queryType": "randomWalk",
@@ -243,15 +250,9 @@
             [
               {
                 "params": [
-                  "snr"
+                  "pop_ping_latency_ms"
                 ],
                 "type": "field"
-              },
-              {
-                "params": [
-                  " *10"
-                ],
-                "type": "math"
               }
             ]
           ],
@@ -260,7 +261,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "SNR",
+      "title": "PoP Ping",
       "type": "stat"
     },
     {
@@ -323,7 +324,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.7",
+      "pluginVersion": "8.2.5",
       "targets": [
         {
           "groupBy": [],
@@ -395,7 +396,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.7",
+      "pluginVersion": "8.2.5",
       "targets": [
         {
           "groupBy": [],
@@ -440,56 +441,12 @@
                 "value": null
               },
               {
-                "color": "super-light-yellow",
-                "value": 45
-              },
-              {
-                "color": "light-yellow",
-                "value": 50
-              },
-              {
-                "color": "semi-dark-yellow",
-                "value": 55
-              },
-              {
-                "color": "dark-yellow",
-                "value": 60
-              },
-              {
-                "color": "super-light-orange",
-                "value": 65
-              },
-              {
-                "color": "light-orange",
-                "value": 70
-              },
-              {
-                "color": "semi-dark-orange",
-                "value": 75
-              },
-              {
-                "color": "dark-orange",
-                "value": 80
-              },
-              {
-                "color": "super-light-red",
-                "value": 85
-              },
-              {
-                "color": "light-red",
-                "value": 90
-              },
-              {
-                "color": "semi-dark-red",
-                "value": 95
-              },
-              {
-                "color": "dark-red",
-                "value": 100
+                "color": "red",
+                "value": 1
               }
             ]
           },
-          "unit": "ms"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -503,7 +460,7 @@
       "options": {
         "colorMode": "value",
         "graphMode": "area",
-        "justifyMode": "auto",
+        "justifyMode": "center",
         "orientation": "auto",
         "reduceOptions": {
           "calcs": [
@@ -515,11 +472,11 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.7",
+      "pluginVersion": "8.2.5",
       "targets": [
         {
           "groupBy": [],
-          "measurement": "spacex.starlink.user_terminal.history",
+          "measurement": "spacex.starlink.user_terminal.status",
           "orderByTime": "ASC",
           "policy": "default",
           "queryType": "randomWalk",
@@ -529,7 +486,7 @@
             [
               {
                 "params": [
-                  "pop_ping_latency_ms"
+                  "pop_ping_drop_rate"
                 ],
                 "type": "field"
               }
@@ -540,7 +497,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Ping",
+      "title": "Ping Drop Rate",
       "type": "stat"
     },
     {
@@ -647,11 +604,11 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.7",
+      "pluginVersion": "8.2.5",
       "targets": [
         {
           "groupBy": [],
-          "measurement": "spacex.starlink.user_terminal.history",
+          "measurement": "spacex.starlink.user_terminal.status",
           "orderByTime": "ASC",
           "policy": "default",
           "queryType": "randomWalk",
@@ -767,11 +724,11 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.7",
+      "pluginVersion": "8.2.5",
       "targets": [
         {
           "groupBy": [],
-          "measurement": "spacex.starlink.user_terminal.history",
+          "measurement": "spacex.starlink.user_terminal.status",
           "orderByTime": "ASC",
           "policy": "default",
           "queryType": "randomWalk",
@@ -802,10 +759,6 @@
       "dashes": false,
       "datasource": "$DS_INFLUXDB",
       "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -833,7 +786,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.7",
+      "pluginVersion": "8.2.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -930,10 +883,6 @@
       "dashes": false,
       "datasource": "$DS_INFLUXDB",
       "description": "",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -961,7 +910,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.7",
+      "pluginVersion": "8.2.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1094,6 +1043,7 @@
         "defaults": {
           "custom": {
             "align": "center",
+            "displayMode": "auto",
             "filterable": false
           },
           "mappings": [],
@@ -1116,7 +1066,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 121
+                "value": 120
               }
             ]
           },
@@ -1128,7 +1078,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 113
+                "value": 88
               }
             ]
           },
@@ -1140,7 +1090,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 110
+                "value": 102
               }
             ]
           },
@@ -1152,7 +1102,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 123
+                "value": 116
               }
             ]
           },
@@ -1164,7 +1114,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 124
+                "value": 119
               }
             ]
           },
@@ -1176,7 +1126,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 111
+                "value": 103
               }
             ]
           },
@@ -1188,7 +1138,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 127
+                "value": 128
               }
             ]
           },
@@ -1200,7 +1150,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 107
+                "value": 94
               }
             ]
           },
@@ -1212,7 +1162,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 156
+                "value": null
               }
             ]
           },
@@ -1224,7 +1174,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 333
+                "value": 374
               }
             ]
           }
@@ -1248,7 +1198,7 @@
           }
         ]
       },
-      "pluginVersion": "7.5.7",
+      "pluginVersion": "8.2.5",
       "targets": [
         {
           "groupBy": [],
@@ -1490,7 +1440,7 @@
     }
   ],
   "refresh": "10s",
-  "schemaVersion": 27,
+  "schemaVersion": 32,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -1538,6 +1488,5 @@
   "timezone": "",
   "title": "Statistics",
   "uid": "ymkHwLaMz",
-  "version": 22
+  "version": 31
 }
-
