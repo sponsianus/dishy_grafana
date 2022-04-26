@@ -3,7 +3,10 @@
     "list": [
       {
         "builtIn": 1,
-        "datasource": "-- Grafana --",
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
@@ -21,10 +24,9 @@
   "description": "Dishy Statistics",
   "editable": true,
   "fiscalYearStartMonth": 0,
-  "gnetId": null,
   "graphTooltip": 0,
   "id": 4,
-  "iteration": 1638381135850,
+  "iteration": 1650993387775,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -33,7 +35,9 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "$DS_INFLUXDB",
+      "datasource": {
+        "uid": "$DS_INFLUXDB"
+      },
       "fieldConfig": {
         "defaults": {
           "unit": "bps"
@@ -69,7 +73,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "8.2.5",
+      "pluginVersion": "8.5.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -113,9 +117,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "Throughput",
       "tooltip": {
         "shared": true,
@@ -124,9 +126,7 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
@@ -134,29 +134,24 @@
         {
           "$$hashKey": "object:1099",
           "format": "bps",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         },
         {
           "$$hashKey": "object:1100",
           "format": "dB",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     },
     {
-      "datasource": "$DS_INFLUXDB",
+      "datasource": {
+        "uid": "$DS_INFLUXDB"
+      },
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -236,7 +231,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.2.5",
+      "pluginVersion": "8.5.0",
       "targets": [
         {
           "groupBy": [],
@@ -259,13 +254,13 @@
           "tags": []
         }
       ],
-      "timeFrom": null,
-      "timeShift": null,
       "title": "PoP Ping",
       "type": "stat"
     },
     {
-      "datasource": "$DS_INFLUXDB",
+      "datasource": {
+        "uid": "$DS_INFLUXDB"
+      },
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -324,7 +319,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.2.5",
+      "pluginVersion": "8.5.0",
       "targets": [
         {
           "groupBy": [],
@@ -347,13 +342,13 @@
           "tags": []
         }
       ],
-      "timeFrom": null,
-      "timeShift": null,
       "title": "Uptime",
       "type": "stat"
     },
     {
-      "datasource": "$DS_INFLUXDB",
+      "datasource": {
+        "uid": "$DS_INFLUXDB"
+      },
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -396,7 +391,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.2.5",
+      "pluginVersion": "8.5.0",
       "targets": [
         {
           "groupBy": [],
@@ -419,13 +414,13 @@
           "tags": []
         }
       ],
-      "timeFrom": null,
-      "timeShift": null,
       "title": "Valid S",
       "type": "stat"
     },
     {
-      "datasource": "$DS_INFLUXDB",
+      "datasource": {
+        "uid": "$DS_INFLUXDB"
+      },
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -472,7 +467,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.2.5",
+      "pluginVersion": "8.5.0",
       "targets": [
         {
           "groupBy": [],
@@ -495,13 +490,13 @@
           "tags": []
         }
       ],
-      "timeFrom": null,
-      "timeShift": null,
       "title": "Ping Drop Rate",
       "type": "stat"
     },
     {
-      "datasource": "$DS_INFLUXDB",
+      "datasource": {
+        "uid": "$DS_INFLUXDB"
+      },
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -604,7 +599,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.2.5",
+      "pluginVersion": "8.5.0",
       "targets": [
         {
           "groupBy": [],
@@ -627,13 +622,13 @@
           "tags": []
         }
       ],
-      "timeFrom": null,
-      "timeShift": null,
       "title": "Download",
       "type": "stat"
     },
     {
-      "datasource": "$DS_INFLUXDB",
+      "datasource": {
+        "uid": "$DS_INFLUXDB"
+      },
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -724,7 +719,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.2.5",
+      "pluginVersion": "8.5.0",
       "targets": [
         {
           "groupBy": [],
@@ -747,8 +742,6 @@
           "tags": []
         }
       ],
-      "timeFrom": null,
-      "timeShift": null,
       "title": "Upload",
       "type": "stat"
     },
@@ -757,7 +750,9 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "$DS_INFLUXDB",
+      "datasource": {
+        "uid": "$DS_INFLUXDB"
+      },
       "description": "",
       "fill": 1,
       "fillGradient": 0,
@@ -786,7 +781,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "8.2.5",
+      "pluginVersion": "8.5.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -834,9 +829,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "Latency & Drop Rate",
       "tooltip": {
         "shared": true,
@@ -845,9 +838,7 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
@@ -855,25 +846,18 @@
         {
           "$$hashKey": "object:262",
           "format": "ms",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         },
         {
           "$$hashKey": "object:263",
           "format": "short",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     },
     {
@@ -881,7 +865,9 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "$DS_INFLUXDB",
+      "datasource": {
+        "uid": "$DS_INFLUXDB"
+      },
       "description": "",
       "fill": 1,
       "fillGradient": 0,
@@ -910,7 +896,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "8.2.5",
+      "pluginVersion": "8.5.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -993,9 +979,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "Obstructed",
       "tooltip": {
         "shared": true,
@@ -1004,9 +988,7 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
@@ -1014,37 +996,32 @@
         {
           "$$hashKey": "object:440",
           "format": "percentunit",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         },
         {
           "$$hashKey": "object:441",
           "format": "s",
-          "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     },
     {
-      "cacheTimeout": null,
-      "datasource": "$DS_INFLUXDB",
+      "datasource": {
+        "uid": "$DS_INFLUXDB"
+      },
       "description": "",
       "fieldConfig": {
         "defaults": {
           "custom": {
             "align": "center",
             "displayMode": "auto",
-            "filterable": false
+            "filterable": false,
+            "inspect": false
           },
           "mappings": [],
           "thresholds": {
@@ -1161,8 +1138,7 @@
             },
             "properties": [
               {
-                "id": "custom.width",
-                "value": null
+                "id": "custom.width"
               }
             ]
           },
@@ -1187,9 +1163,15 @@
         "y": 14
       },
       "id": 11,
-      "interval": null,
       "links": [],
       "options": {
+        "footer": {
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
         "showHeader": true,
         "sortBy": [
           {
@@ -1198,7 +1180,7 @@
           }
         ]
       },
-      "pluginVersion": "8.2.5",
+      "pluginVersion": "8.5.0",
       "targets": [
         {
           "groupBy": [],
@@ -1343,8 +1325,6 @@
           "tags": []
         }
       ],
-      "timeFrom": null,
-      "timeShift": null,
       "title": "System Status",
       "transformations": [
         {
@@ -1440,14 +1420,12 @@
     }
   ],
   "refresh": "10s",
-  "schemaVersion": 32,
+  "schemaVersion": 36,
   "style": "dark",
   "tags": [],
   "templating": {
     "list": [
       {
-        "description": null,
-        "error": null,
         "hide": 2,
         "label": "InfluxDB DataSource",
         "name": "DS_INFLUXDB",
@@ -1456,8 +1434,6 @@
         "type": "constant"
       },
       {
-        "description": null,
-        "error": null,
         "hide": 2,
         "label": "Table name for Statistics",
         "name": "TBL_STATS",
@@ -1488,5 +1464,6 @@
   "timezone": "",
   "title": "Statistics",
   "uid": "ymkHwLaMz",
-  "version": 31
+  "version": 32,
+  "weekStart": ""
 }
