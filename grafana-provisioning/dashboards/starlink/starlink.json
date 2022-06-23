@@ -26,7 +26,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 4,
-  "iteration": 1653936305481,
+  "iteration": 1656009608264,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -203,7 +203,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.3",
+      "pluginVersion": "9.0.1",
       "targets": [
         {
           "groupBy": [],
@@ -291,7 +291,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.3",
+      "pluginVersion": "9.0.1",
       "targets": [
         {
           "groupBy": [],
@@ -363,7 +363,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.3",
+      "pluginVersion": "9.0.1",
       "targets": [
         {
           "groupBy": [],
@@ -439,7 +439,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.3",
+      "pluginVersion": "9.0.1",
       "targets": [
         {
           "groupBy": [],
@@ -571,7 +571,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.3",
+      "pluginVersion": "9.0.1",
       "targets": [
         {
           "groupBy": [],
@@ -691,7 +691,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.3",
+      "pluginVersion": "9.0.1",
       "targets": [
         {
           "groupBy": [],
@@ -1229,7 +1229,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "8.5.3",
+      "pluginVersion": "9.0.1",
       "targets": [
         {
           "datasource": {
@@ -1242,13 +1242,7 @@
           "measurement": "spacex.starlink.user_terminal.status",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT \"state\" AS \"State\", \"alert_roaming\" AS \"Roaming\", 
-\"currently_obstructed\" AS \"Obstructed\", \"alert_unexpected_location\" AS \"Bad Location\", 
-\"alert_thermal_throttle\" AS \"Temp Throttled\", \"alert_thermal_shutdown\" AS \"Temp Shutdown\", 
-\"alert_motors_stuck\" AS \"Motors Stuck\", \"software_version\" AS \"Software Version\", 
-\"alert_slow_ethernet_speeds\" AS \"Slow Speed\", \"alert_is_heating\" AS \"Heating\", 
-\"alert_mast_not_near_vertical\" AS \"Mast Not Vertical\" FROM \"spacex.starlink.user_terminal.status\" 
-WHERE $timeFilter",
+          "query": "SELECT \"state\" AS \"State\", \"alert_roaming\" AS \"Roaming\", \"currently_obstructed\" AS \"Obstructed\", \"alert_unexpected_location\" AS \"Bad Location\", \"alert_thermal_throttle\" AS \"Temp Throttled\", \"alert_thermal_shutdown\" AS \"Temp Shutdown\", \"alert_motors_stuck\" AS \"Motors Stuck\", \"software_version\" AS \"Software Version\", \"alert_slow_ethernet_speeds\" AS \"Slow Speed\", \"alert_is_heating\" AS \"Heating\", \"alert_mast_not_near_vertical\" AS \"Mast Not Vertical\" FROM \"spacex.starlink.user_terminal.status\" WHERE $timeFilter",
           "queryType": "randomWalk",
           "rawQuery": false,
           "refId": "A",

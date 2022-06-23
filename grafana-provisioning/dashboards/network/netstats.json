@@ -27,7 +27,7 @@
   "gnetId": 13140,
   "graphTooltip": 0,
   "id": 6,
-  "iteration": 1653936400230,
+  "iteration": 1656010158469,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -123,7 +123,7 @@
         "showThresholdMarkers": true,
         "text": {}
       },
-      "pluginVersion": "8.5.3",
+      "pluginVersion": "9.0.1",
       "targets": [
         {
           "groupBy": [
@@ -232,7 +232,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.3",
+      "pluginVersion": "9.0.1",
       "targets": [
         {
           "groupBy": [],
@@ -481,7 +481,7 @@
         "showThresholdMarkers": true,
         "text": {}
       },
-      "pluginVersion": "8.5.3",
+      "pluginVersion": "9.0.1",
       "targets": [
         {
           "groupBy": [],
@@ -581,7 +581,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.3",
+      "pluginVersion": "9.0.1",
       "targets": [
         {
           "groupBy": [],
@@ -821,7 +821,7 @@
         "showUnfilled": true,
         "text": {}
       },
-      "pluginVersion": "8.5.3",
+      "pluginVersion": "9.0.1",
       "targets": [
         {
           "alias": "$tag_domain",
@@ -1444,8 +1444,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "super-light-green",
-                "value": null
+                "color": "super-light-green"
               },
               {
                 "color": "semi-dark-green",
@@ -1516,8 +1515,7 @@
           "hide": false,
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT mean(\"average_response_ms\") FROM \"ping\" WHERE (\"url\" =~ /^$PingURL$/) 
-AND $timeFilter GROUP BY time($__interval) fill(null)",
+          "query": "SELECT mean(\"average_response_ms\") FROM \"ping\" WHERE (\"url\" =~ /^$PingURL$/) AND $timeFilter GROUP BY time($__interval) fill(null)",
           "rawQuery": true,
           "refId": "A",
           "resultFormat": "time_series",
@@ -1559,8 +1557,7 @@ AND $timeFilter GROUP BY time($__interval) fill(null)",
             "mode": "absolute",
             "steps": [
               {
-                "color": "rgb(238, 238, 238)",
-                "value": null
+                "color": "rgb(238, 238, 238)"
               }
             ]
           },
@@ -1660,8 +1657,7 @@ AND $timeFilter GROUP BY time($__interval) fill(null)",
             "mode": "absolute",
             "steps": [
               {
-                "color": "red",
-                "value": null
+                "color": "red"
               },
               {
                 "color": "transparent",
@@ -1787,8 +1783,7 @@ AND $timeFilter GROUP BY time($__interval) fill(null)",
             "mode": "absolute",
             "steps": [
               {
-                "color": "transparent",
-                "value": null
+                "color": "transparent"
               }
             ]
           },
@@ -2050,8 +2045,7 @@ AND $timeFilter GROUP BY time($__interval) fill(null)",
             "mode": "absolute",
             "steps": [
               {
-                "color": "rgb(238, 238, 238)",
-                "value": null
+                "color": "rgb(238, 238, 238)"
               }
             ]
           },
@@ -2124,8 +2118,7 @@ AND $timeFilter GROUP BY time($__interval) fill(null)",
             "mode": "percentage",
             "steps": [
               {
-                "color": "red",
-                "value": null
+                "color": "red"
               },
               {
                 "color": "red",
@@ -2189,8 +2182,7 @@ AND $timeFilter GROUP BY time($__interval) fill(null)",
           ],
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT 100 - mean(\"percent_packet_loss\") FROM \"ping\" WHERE \"url\" =~ 
-/^$PingURL$/ AND $timeFilter GROUP BY time(1m) fill(null)",
+          "query": "SELECT 100 - mean(\"percent_packet_loss\") FROM \"ping\" WHERE \"url\" =~ /^$PingURL$/ AND $timeFilter GROUP BY time(1m) fill(null)",
           "rawQuery": true,
           "refId": "A",
           "resultFormat": "time_series",
@@ -2272,8 +2264,7 @@ AND $timeFilter GROUP BY time($__interval) fill(null)",
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -2330,13 +2321,7 @@ AND $timeFilter GROUP BY time($__interval) fill(null)",
               "measurement": "netstat",
               "orderByTime": "ASC",
               "policy": "default",
-              "query": "SELECT mean(\"tcp_close\") AS \"tcp_close\", mean(\"tcp_close_wait\") AS 
-\"tcp_close_wait\", mean(\"tcp_closing\") AS \"tcp_colsing\", mean(\"tcp_fin_wait1\") AS 
-\"tcp_fin_wait1\", mean(\"tcp_fin_wait2\") AS \"tcp_fin_wait2\", mean(\"tcp_last_ack\") AS 
-\"tcp_last_ack\", mean(\"tcp_syn_recv\") AS \"tcp_syn_recv\", mean(\"tcp_syn_sent\") AS \"tcp_syn_sent\", 
-mean(\"tcp_listen\") AS \"tcp_listen\", mean(\"tcp_time_wait\") AS \"tcp_time_wait\", 
-mean(\"udp_socket\") AS \"udp_socket\", mean(\"tcp_established\") AS \"tcp_established\" FROM \"netstat\" 
-GROUP BY time($interval) fill(null)",
+              "query": "SELECT mean(\"tcp_close\") AS \"tcp_close\", mean(\"tcp_close_wait\") AS \"tcp_close_wait\", mean(\"tcp_closing\") AS \"tcp_colsing\", mean(\"tcp_fin_wait1\") AS \"tcp_fin_wait1\", mean(\"tcp_fin_wait2\") AS \"tcp_fin_wait2\", mean(\"tcp_last_ack\") AS \"tcp_last_ack\", mean(\"tcp_syn_recv\") AS \"tcp_syn_recv\", mean(\"tcp_syn_sent\") AS \"tcp_syn_sent\", mean(\"tcp_listen\") AS \"tcp_listen\", mean(\"tcp_time_wait\") AS \"tcp_time_wait\", mean(\"udp_socket\") AS \"udp_socket\", mean(\"tcp_established\") AS \"tcp_established\" FROM \"netstat\" GROUP BY time($interval) fill(null)",
               "rawQuery": true,
               "refId": "A",
               "resultFormat": "time_series",
@@ -2393,8 +2378,7 @@ GROUP BY time($interval) fill(null)",
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "super-light-blue",
-                    "value": null
+                    "color": "super-light-blue"
                   }
                 ]
               },
@@ -2457,8 +2441,7 @@ GROUP BY time($interval) fill(null)",
                       "mode": "absolute",
                       "steps": [
                         {
-                          "color": "light-red",
-                          "value": null
+                          "color": "light-red"
                         },
                         {
                           "color": "light-green",
@@ -2640,8 +2623,7 @@ GROUP BY time($interval) fill(null)",
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "rgb(96, 96, 96)",
-                    "value": null
+                    "color": "rgb(96, 96, 96)"
                   }
                 ]
               },
