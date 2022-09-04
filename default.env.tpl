@@ -41,17 +41,17 @@ GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD}
 # Network Test Settings
 
 DOMAIN_1="google.com"
-HTTP_DOMAIN_1="https://google.com"
+HTTP_DOMAIN_1="https://www.google.com"
 DOMAIN_2="twitter.com"
-HTTP_DOMAIN_2="https://twitter.com"
+HTTP_DOMAIN_2="https://www.twitter.com"
 DOMAIN_3="amazon.com"
-HTTP_DOMAIN_3="https://amazon.com"
+HTTP_DOMAIN_3="https://www.amazon.com"
 DOMAIN_4="yahoo.com"
-HTTP_DOMAIN_4="https://yahoo.com"
+HTTP_DOMAIN_4="https://www.yahoo.com"
 DOMAIN_5="reddit.com"
-HTTP_DOMAIN_5="https://redit.com"
+HTTP_DOMAIN_5="https://www.redit.com"
 DOMAIN_6="cloudflare.com"
-HTTP_DOMAIN_6="https://cloudflare.com"
+HTTP_DOMAIN_6="https://www.cloudflare.com"
 
 PRIMARY_DNS_SERVER="1.1.1.1"
 SECONDARY_DNS_SERVER="8.8.8.8"
