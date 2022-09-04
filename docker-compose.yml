@@ -56,7 +56,6 @@ services:
     env_file:
       - default.env
     restart: always
-    privileged: true
 
 volumes:
   influxdb-storage:

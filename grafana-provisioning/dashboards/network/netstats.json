@@ -4,7 +4,7 @@
       {
         "builtIn": 1,
         "datasource": {
-          "type": "datasource",
+          "type": "influxdb",
           "uid": "grafana"
         },
         "enable": true,
@@ -34,7 +34,7 @@
     {
       "collapsed": false,
       "datasource": {
-        "type": "datasource",
+        "type": "influxdb",
         "uid": "grafana"
       },
       "gridPos": {
@@ -51,7 +51,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "Ibcblc_Mk"
+        "uid": "netstats"
       },
       "fieldConfig": {
         "defaults": {
@@ -168,7 +168,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "Ibcblc_Mk"
+        "uid": "netstats"
       },
       "description": "",
       "fieldConfig": {
@@ -266,7 +266,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "Ibcblc_Mk"
+        "uid": "netstats"
       },
       "description": "",
       "fieldConfig": {
@@ -400,7 +400,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "Ibcblc_Mk"
+        "uid": "netstats"
       },
       "description": "Average response time for External Ping in ms.",
       "fieldConfig": {
@@ -519,7 +519,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "Ibcblc_Mk"
+        "uid": "netstats"
       },
       "description": "",
       "fieldConfig": {
@@ -615,7 +615,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "Ibcblc_Mk"
+        "uid": "netstats"
       },
       "description": "",
       "fieldConfig": {
@@ -749,7 +749,7 @@
     {
       "collapsed": false,
       "datasource": {
-        "type": "datasource",
+        "type": "influxdb",
         "uid": "grafana"
       },
       "gridPos": {
@@ -766,7 +766,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "Ibcblc_Mk"
+        "uid": "netstats"
       },
       "description": "",
       "fieldConfig": {
@@ -857,7 +857,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "Ibcblc_Mk"
+        "uid": "netstats"
       },
       "description": "",
       "fieldConfig": {
@@ -971,7 +971,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "Ibcblc_Mk"
+        "uid": "netstats"
       },
       "description": "",
       "fieldConfig": {
@@ -1100,7 +1100,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "Ibcblc_Mk"
+        "uid": "netstats"
       },
       "fieldConfig": {
         "defaults": {
@@ -1261,7 +1261,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "Ibcblc_Mk"
+        "uid": "netstats"
       },
       "fieldConfig": {
         "defaults": {
@@ -1416,7 +1416,7 @@
       "collapsed": false,
       "datasource": {
         "type": "influxdb",
-        "uid": "Ibcblc_Mk"
+        "uid": "netstats"
       },
       "gridPos": {
         "h": 1,
@@ -1432,7 +1432,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "Ibcblc_Mk"
+        "uid": "netstats"
       },
       "fieldConfig": {
         "defaults": {
@@ -1542,7 +1542,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "Ibcblc_Mk"
+        "uid": "netstats"
       },
       "fieldConfig": {
         "defaults": {
@@ -1616,7 +1616,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "Ibcblc_Mk"
+        "uid": "netstats"
       },
       "description": "HTTP GET request response time (ms)",
       "fieldConfig": {
@@ -1740,7 +1740,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "Ibcblc_Mk"
+        "uid": "netstats"
       },
       "fieldConfig": {
         "defaults": {
@@ -1817,7 +1817,7 @@
           "alias": "Transmit",
           "datasource": {
             "type": "influxdb",
-            "uid": "Ibcblc_Mk"
+            "uid": "netstats"
           },
           "groupBy": [
             {
@@ -1852,7 +1852,7 @@
           "alias": "Receive",
           "datasource": {
             "type": "influxdb",
-            "uid": "Ibcblc_Mk"
+            "uid": "netstats"
           },
           "groupBy": [
             {
@@ -1887,7 +1887,7 @@
           "alias": "Drop In",
           "datasource": {
             "type": "influxdb",
-            "uid": "Ibcblc_Mk"
+            "uid": "netstats"
           },
           "groupBy": [
             {
@@ -1922,7 +1922,7 @@
           "alias": "Drop Out",
           "datasource": {
             "type": "influxdb",
-            "uid": "Ibcblc_Mk"
+            "uid": "netstats"
           },
           "groupBy": [
             {
@@ -1957,7 +1957,7 @@
           "alias": "Error In",
           "datasource": {
             "type": "influxdb",
-            "uid": "Ibcblc_Mk"
+            "uid": "netstats"
           },
           "groupBy": [
             {
@@ -1992,7 +1992,7 @@
           "alias": "Error Out",
           "datasource": {
             "type": "influxdb",
-            "uid": "Ibcblc_Mk"
+            "uid": "netstats"
           },
           "groupBy": [
             {
@@ -2030,7 +2030,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "Ibcblc_Mk"
+        "uid": "netstats"
       },
       "fieldConfig": {
         "defaults": {
@@ -2104,7 +2104,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "Ibcblc_Mk"
+        "uid": "netstats"
       },
       "fieldConfig": {
         "defaults": {
@@ -2209,7 +2209,7 @@
     {
       "collapsed": true,
       "datasource": {
-        "type": "datasource",
+        "type": "influxdb",
         "uid": "grafana"
       },
       "gridPos": {
@@ -2223,7 +2223,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "Ibcblc_Mk"
+            "uid": "netstats"
           },
           "description": "",
           "fieldConfig": {
@@ -2360,7 +2360,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "Ibcblc_Mk"
+            "uid": "netstats"
           },
           "fieldConfig": {
             "defaults": {
@@ -2605,7 +2605,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "Ibcblc_Mk"
+            "uid": "netstats"
           },
           "fieldConfig": {
             "defaults": {
@@ -2802,7 +2802,7 @@
         },
         "datasource": {
           "type": "influxdb",
-          "uid": "Ibcblc_Mk"
+          "uid": "netstats"
         },
         "definition": "",
         "hide": 0,

@@ -4,8 +4,8 @@
       {
         "builtIn": 1,
         "datasource": {
-          "type": "datasource",
-          "uid": "grafana"
+          "type": "influxdb",
+          "uid": "starlinkstats"
         },
         "enable": true,
         "hide": true,
@@ -32,7 +32,8 @@
   "panels": [
     {
       "datasource": {
-        "uid": "$DS_INFLUXDB"
+        "type": "influxdb",
+        "uid": "starlinkstats"
       },
       "fieldConfig": {
         "defaults": {
@@ -156,7 +157,8 @@
     },
     {
       "datasource": {
-        "uid": "$DS_INFLUXDB"
+        "type": "influxdb",
+        "uid": "starlinkstats"
       },
       "description": "",
       "fieldConfig": {
@@ -231,7 +233,8 @@
     },
     {
       "datasource": {
-        "uid": "$DS_INFLUXDB"
+        "type": "influxdb",
+        "uid": "starlinkstats"
       },
       "description": "",
       "fieldConfig": {
@@ -319,7 +322,8 @@
     },
     {
       "datasource": {
-        "uid": "$DS_INFLUXDB"
+        "type": "influxdb",
+        "uid": "starlinkstats"
       },
       "description": "",
       "fieldConfig": {
@@ -391,7 +395,8 @@
     },
     {
       "datasource": {
-        "uid": "$DS_INFLUXDB"
+        "type": "influxdb",
+        "uid": "starlinkstats"
       },
       "description": "",
       "fieldConfig": {
@@ -467,7 +472,8 @@
     },
     {
       "datasource": {
-        "uid": "$DS_INFLUXDB"
+        "type": "influxdb",
+        "uid": "starlinkstats"
       },
       "description": "",
       "fieldConfig": {
@@ -599,7 +605,8 @@
     },
     {
       "datasource": {
-        "uid": "$DS_INFLUXDB"
+        "type": "influxdb",
+        "uid": "starlinkstats"
       },
       "description": "",
       "fieldConfig": {
@@ -719,7 +726,8 @@
     },
     {
       "datasource": {
-        "uid": "$DS_INFLUXDB"
+        "type": "influxdb",
+        "uid": "starlinkstats"
       },
       "description": "",
       "fieldConfig": {
@@ -858,7 +866,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "$DS_INFLUXDB"
+        "uid": "starlinkstats"
       },
       "description": "",
       "fieldConfig": {
@@ -953,7 +961,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "QO9OCO_Mz"
+            "uid": "starlinkstats"
           },
           "groupBy": [],
           "hide": false,
@@ -1011,7 +1019,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "$DS_INFLUXDB"
+        "uid": "starlinkstats"
       },
       "description": "",
       "fieldConfig": {
@@ -1234,7 +1242,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "QO9OCO_Mz"
+            "uid": "starlinkstats"
           },
           "groupBy": [],
           "hide": false,

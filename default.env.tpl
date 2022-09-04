@@ -9,7 +9,6 @@ ADMIN_PASSWORD="StrongPassword1234"
 
 # Speed Test Settings
 
-SPEEDTEST_COMMAND="speedtest -u bps -f json-pretty --accept-license"
 SPEEDTEST_INTERVAL="1h"
 
 ########################
