@@ -1,5 +1,7 @@
 # Starlink Dishy Grafana Dashboards
 
+![Docker Pulls](https://img.shields.io/docker/pulls/sponsianus/starlink-grpc-tools) [![GitHub stars](https://img.shields.io/github/stars/sponsianus/dishy_grafana)](https://github.com/sponsianus/dishy_grafana/stargazers)
+
 Docker compose project for tracking Starlink Dishy and Network statistics with Grafana.
 
 ## Initial Install
