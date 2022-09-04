@@ -4,8 +4,8 @@
       {
         "builtIn": 1,
         "datasource": {
-          "type": "influxdb",
-          "uid": "starlinkstats"
+          "type": "datasource",
+          "uid": "grafana"
         },
         "enable": true,
         "hide": true,

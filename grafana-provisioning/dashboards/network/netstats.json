@@ -4,7 +4,7 @@
       {
         "builtIn": 1,
         "datasource": {
-          "type": "influxdb",
+          "type": "datasource",
           "uid": "grafana"
         },
         "enable": true,
