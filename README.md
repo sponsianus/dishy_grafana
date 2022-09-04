@@ -12,7 +12,7 @@ Docker compose project for tracking Starlink Dishy and Network statistics with G
 1. Clone the repo. (Suggested to clone into your `/opt` directory)
 
    ```bash
-   git clone https://github.com/sponsianus/dishy_grafana`
+   git clone https://github.com/sponsianus/dishy_grafana
     ```
 
 1. Copy `default.env.tpl` to `default.env` and **edit the variables** to suite your needs.
@@ -27,8 +27,9 @@ Docker compose project for tracking Starlink Dishy and Network statistics with G
    docker-compose up -d
    ```
 
-1. Point your browser to your hosts `IP` and port `3000` to load the Grafana dashboard. (EG. `http://192.168.X.X:3000`)
-    - Login with the credentials you set in your newly created `default.env` file.
+1. Point your browser to your hosts `IP` and port `3000` to load the Grafana dashboard. `http://<your-ip>:3000`
+
+   - Login with the credentials you set in your newly created `default.env` file.
 
 ## Updating
 
