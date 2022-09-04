@@ -31,11 +31,20 @@ Docker compose project for tracking Starlink Dishy and Network statistics with G
 
 1. Point your browser to your hosts `IP` and port `3000` to load the Grafana dashboard. `http://<your-ip>:3000`
 
-   - Login with the credentials you set in your newly created `default.env` file.
+    - Login with the credentials you set in your newly created `default.env` file.
 
 ## Updating
 
-The container images will be rebuilt on a regular basis. To keep your install upto date, perform the following:
+The project container images will be rebuilt on a regular basis but may be slightly behind their original sources.
+When updating, check for any variable changes in `default.env.tpl` and apply any changes to your `default.env` file as needed.
+
+### One Line Update Command
+
+```bash
+git pull && docker-compose pull && docker-compose up -d
+```
+
+### Manual Update
 
 From the directory containing the `docker-compose.yml` file:
 
@@ -44,8 +53,6 @@ From the directory containing the `docker-compose.yml` file:
    ```bash
     git pull
    ```
-
-1. Check for any variable changes in `default.env.tpl` and apply any changes to your `default.env` file as needed.
 
 1. Update container images.
 
@@ -59,20 +66,29 @@ From the directory containing the `docker-compose.yml` file:
    docker-compose up -d
    ```
 
-### One Line Update Command
-
-```bash
-git pull && docker-compose pull && docker-compose up -d
-```
-
 ## Troubleshooting
 
-- You can check the logs from the containers by running
+- Watch the logs from the containers by running:
 
-```bash
-docker-compose logs -f
-```
+   ```bash
+   docker-compose logs -f --tail="10"
+   ```
+
+- Destroy and rebuild the containers. This will destroy existing data.
+
+   ```bash
+   docker-compose down -v && docker-compose up -d
+   ```
+
+## Support
+
+   - Open an issue in the [GitHub repo](https://github.com/sponsianus/dishy_grafana/issues/new).
+   - Discussion on Reddit in [r/Starlink](https://www.reddit.com/r/Starlink/comments/nhwb6w/dishy_grafana_monitoring/).
 
 ## Resources
 
 - See [starlink-grpc-tools](https://github.com/sparky8512/starlink-grpc-tools) for the GRPC tools used in this project.
+
+## License
+
+[MIT](LICENSE.md)
